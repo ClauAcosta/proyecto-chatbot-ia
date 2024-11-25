@@ -1,0 +1,9 @@
+langchain
+langchain-groq
+langchain-core
+langchain-community
+beautifulsoup4
+python-dotenv
+streamlit
+faiss-cpu
+transformers
