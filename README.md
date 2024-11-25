@@ -24,8 +24,7 @@ El asistente está diseñado para ser utilizado a través de:
 
 📋 Requisitos de Instalación
 1. Clonar el Repositorio
-git clone https://github.com/tuusuario/asistente-conversacional-rag.git
-cd 
+git clone https://github.com/ClauAcosta/proyecto-chatbot-ia.git
 2. Instalar Dependencias
 pip install -r requirements.txt
 3. Configuración
