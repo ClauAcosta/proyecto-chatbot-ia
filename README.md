@@ -1,4 +1,5 @@
 Asistente Conversacional Inteligente (RAG)
+
 Este proyecto es el resultado del Curso de Desarrollo de Asistentes Conversacionales. El objetivo es construir un asistente que responda preguntas de manera precisa y eficiente utilizando Generación Aumentada por Recuperación (RAG), integrando tecnologías modernas para bases de datos vectoriales, memoria, y frameworks como Langchain o Langgraph.
 🚀 Objetivo del Proyecto
 Desarrollo de un asistente conversacional que pueda:
