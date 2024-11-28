@@ -1,25 +1,38 @@
-Asistente Conversacional Inteligente (RAG)
+Asistente Conversacional Inteligente para Noticias Financieras (RAG)
+Este proyecto es el resultado del Curso de Desarrollo de Asistentes Conversacionales, con el objetivo de construir un asistente conversacional que aproveche las ventajas de la Generación Aumentada por Recuperación (RAG) y tecnologías modernas como bases de datos vectoriales y frameworks especializados.
 
-Este proyecto es el resultado del Curso de Desarrollo de Asistentes Conversacionales. El objetivo es construir un asistente que responda preguntas de manera precisa y eficiente utilizando Generación Aumentada por Recuperación (RAG), integrando tecnologías modernas para bases de datos vectoriales, memoria, y frameworks como Langchain o Langgraph.
 🚀 Objetivo del Proyecto
-Desarrollo de un asistente conversacional que pueda:
-•	Responder preguntas sobre una base de conocimientos específica.
-•	Mantener una conversación fluida gracias a su sistema de memoria.
-🛠️ Componentes Técnicos
-1. Generación Aumentada por Recuperación (RAG)
-El asistente utiliza una base de datos vectorial para manejar su fuente de conocimiento. Esto permite responder preguntas que no están directamente cubiertas por los datos de entrenamiento del modelo base.
-Bases de datos vectoriales :
-•	FAISS
-2. Framework
-La solución se construye utilizando:
-•	Langchain  para la implementación y orquestación del asistente.
-3. Memoria
-•	Memoria conversacional para continuar interacciones de manera coherente.
-4. Interfaz de Usuario
-El asistente está diseñado para ser utilizado a través de:
-•	Streamlit (implementación principal)
+El asistente está diseñado para:
+Responder preguntas de manera precisa y eficiente basándose en una base de conocimientos de una web.
+Ofrecer una experiencia de usuario enriquecida a través de una interfaz gráfica amigable.
+Visualizar las cotizaciones del día de algunas acciones financieras directamente en la interfaz.
+Nota: Aunque estaba planificada la integración de un sistema de memoria conversacional, esta funcionalidad no fue implementada en esta versión.
 
-5. Modelo
+🛠️ Componentes Técnicos
+Generación Aumentada por Recuperación (RAG)
+El asistente utiliza una base de datos vectorial para manejar su fuente de conocimiento, lo que permite responder preguntas que no están directamente cubiertas por los datos de entrenamiento del modelo base.
+
+Base de datos vectorial:
+FAISS
+Framework
+La solución está construida utilizando:
+
+Langchain: Orquestación y gestión de las interacciones del asistente.
+Embeddings
+Se utiliza el modelo de embeddings para convertir el texto en representaciones vectoriales:
+
+HuggingFaceEmbeddings: sentence-transformers/all-MiniLM-L6-v2
+Modelo de Lenguaje
+El asistente utiliza el siguiente modelo para la generación de respuestas:
+
+ChatGroq: llama-3.2-90b-vision-preview
+Interfaz de Usuario
+La interfaz está diseñada para ser accesible y fácil de usar mediante Streamlit, mostrando:
+
+Respuestas a las consultas del usuario.
+Cotizaciones del día de acciones financieras seleccionadas en el lado izquierdo de la pantalla.
+
+ Modelo
  llm = ChatGroq(model="llama-3.2-90b-vision-preview")
   embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
